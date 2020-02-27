@@ -6,12 +6,13 @@ Vue.use(VueRouter)
 const Home = ()=>import('../views/Home')
 const About = ()=>import('../views/About')
 const TestCom = ()=>import('../views/TestCom')
+const Index = ()=>import('../views/Index')
 
 const routes = [
   {
     path: '/',
     // name: 'home',
-    redirect:'/home'
+    redirect:'/index'
   },
   {
     path: '/home',
@@ -19,15 +20,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/test',
-    name: 'test',
-    component: TestCom
+    path: '/index',
+    name: 'index',
+    component: Index
   },
-  {
-    path: '/about',
-    name: 'about',
-    component: About
-  }
+  // {
+  //   path: '/test',
+  //   name: 'test',
+  //   component: TestCom
+  // },
+  // {
+  //   path: '/about',
+  //   name: 'about',
+  //   component: About
+  // }
 ]
 
 const router = new VueRouter({
